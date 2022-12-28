@@ -1,0 +1,177 @@
+.watchBlockWrapper {
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 50px 0 10px 0;
+    border: 0px solid;
+}
+
+.watchBlock {
+    padding: 0px 30px 40px 30px;
+    border: 0px solid;
+}
+
+/*analog_clock styles*/
+.clock {
+    width: 200px;
+    height: 200px;
+    border: 0px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../../assets/images/clock_face.png");
+    margin: 20px 0 5px 0;
+}
+
+.clock:before{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+    z-index: 999;
+}
+
+.clock .hour,
+.clock .min,
+.clock .sec {
+    position: absolute;
+}
+
+.clock .hour .hr {
+    width: 70px;
+    height: 70px;
+}
+
+.clock .min .mn {
+    width: 140px;
+    height: 140px;
+}
+.clock .sec .sc {
+    width: 180px;
+    height: 180px;
+}
+
+.hr, .mn, .sc {
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    border: 0px solid;
+}
+
+.hr:before{
+    content: "";
+    width: 5px;
+    height: 35px;
+    background-color: black;
+    z-index: 10;
+    border-radius: 10%;
+}
+.mn:before{
+    content: "";
+    width: 3px;
+    height: 70px;
+    background-color: black;
+    z-index: 11;
+    border-radius: 10%;
+}
+.sc:before{
+    content: "";
+    width: 1px;
+    height: 90px;
+    background-color: black;
+    z-index: 12;
+    border-radius: 10%;
+}
+
+/*e_clock styles*/
+.e_clock {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    border: 0px solid;
+}
+
+/*timezoneSwitcher selector styles*/
+.timezoneSwitcher {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timezoneSwitcher select {
+    height: 30px;
+}
+
+/*addWatchBlock styles*/
+.addWatchBlock{
+    width: 260px;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid;
+}
+
+.addWatch {
+    width: 80px;
+    height: 80px;
+    background-image: url("../../assets/images/plus_icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 15px;
+    border: 0px solid lightgrey;
+    border-radius: 50%;
+}
+
+.addWatch:hover {
+    background-color: lightgrey;
+    padding: 25px;
+    cursor: pointer;
+}
+
+/*limitBanner styles*/
+.limitBanner {
+    position: absolute;
+    margin-top: -80px;
+    font-size: large;
+    padding: 20px;
+    border: 1px solid;
+}
+/*absenceBanner styles*/
+.absenceBannerBlock {
+    display:flex;
+    align-items: center;
+    border: 0px solid;
+}
+
+.absenceBanner {
+    width: 260px;
+    border: 0px solid;
+    text-align: center;
+    padding: 25px 0 25px 0;
+    background-color: lightgrey;
+}
+
+/*deleteSymbol styles*/
+.watchBlock .deleteWatchBlock {
+    width: 30px;
+    height: 30px;
+    border: 0px solid lightgrey;
+    background-image: url("../../assets/images/cross_icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px 30px;
+    float: right;
+    margin-right: -30px;
+    display: none;
+}
+
+.watchBlock:hover .deleteWatchBlock{
+    display: block;
+    cursor: pointer;
+}
