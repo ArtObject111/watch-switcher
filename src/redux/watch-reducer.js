@@ -92,7 +92,7 @@ export const toggleIsFetchingActionCreator = (isFetching) => ({type: TOGGLE_IS_F
 
 //блок thunkCreators
 export const getTimezonesThunkCreator = () => {
-    alert("Внимание, будет осуществоена загрузка данных.");
+    alert("Внимание, будет осуществлена загрузка данных.");
     //Thunk
     return (dispatch) => {
         dispatch(toggleIsFetchingActionCreator(true))
