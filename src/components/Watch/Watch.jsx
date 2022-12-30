@@ -8,10 +8,14 @@ const Watch = (props) => {
     let mm = props.currentMinutes
     let ss = props.currentSeconds
 
-    //electronicClockValues
-    let hours = hh < 10 ? `0` + hh : hh
-    let minutes = mm < 10 ? `0` + mm : mm
-    let seconds = ss < 10 ? `0` + ss : ss
+    //formatting "00:" of electronicClockValues
+    let setFormat = (digit) => {
+        return digit < 10 ? `0` + digit : digit
+    }
+    //formatting hours, if value > 24 of electronicClockValues
+    let setFormatHours = (curHours) => {
+        return (curHours >= 24) ? Math.abs(24 - curHours) : curHours
+    }
     //Clock hand positions changes
     const deg = 6;
     let hrStyle = (n) => {
@@ -26,7 +30,6 @@ const Watch = (props) => {
     //changing timezone callback, transferring event for getting UTC from select-list
     // and id of define watch
     let changeTimezone = (event, id) => {
-        let n = Number(event.target.value)
         props.changeTimezone(Number(event.target.value), id)
     }
     //options elements for selector
@@ -71,8 +74,8 @@ const Watch = (props) => {
                         </div>
                         {/*Displaying electronic watch in format hh.mm.ss*/}
                         <div className={s.e_clock}>
-                            {(hh + w.curTimezone) > 24 ? (24 - w.curTimezone) : (hh + w.curTimezone)}
-                            :{minutes}:{seconds}
+                            {setFormat(setFormatHours(hh + w.curTimezone))}
+                            :{setFormat(mm)}:{setFormat(ss)}
                         </div>
                         {/*Displaying a cities selector*/}
                         <div className={s.timezoneSwitcher}>

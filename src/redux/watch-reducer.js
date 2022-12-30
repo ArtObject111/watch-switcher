@@ -1,4 +1,3 @@
-import {keyboard} from "@testing-library/user-event/dist/keyboard";
 import axios from "axios";
 
 const SET_TIMEZONES = "SET-TIMEZONES"
@@ -48,7 +47,7 @@ const WatchReducer = (state = initialState, action) => {
                 watchesData: [...state.watchesData, newWatch]
             }
         case DELETE_WATCH:
-            const arr = state.watchesData
+            const arr = [...state.watchesData]
             arr.map(w => {
                 if (w.id === action.id) {
                     arr.splice(arr.indexOf(w), 1)
