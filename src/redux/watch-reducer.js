@@ -13,7 +13,7 @@ let initialState = {
         minutes: 0,
         seconds: 0
     },
-    maxWatchesAmount: 24,
+    maxWatchesAmount: 11,
     watchesData: [
         {id: 1, curTimezone: 2},
         {id: 2, curTimezone: 2}
@@ -91,7 +91,6 @@ export const toggleIsFetchingActionCreator = (isFetching) => ({type: TOGGLE_IS_F
 
 //блок thunkCreators
 export const getTimezonesThunkCreator = () => {
-    alert("Внимание, будет осуществлена загрузка данных.");
     //Thunk
     return (dispatch) => {
         dispatch(toggleIsFetchingActionCreator(true))

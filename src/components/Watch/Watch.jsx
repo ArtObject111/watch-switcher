@@ -44,16 +44,20 @@ const Watch = (props) => {
         }
     }
 
+    // if (props.isFetching) {
+    //     return <Preloader/>
+    // }
+
     return <>
         <div className={s.watchBlockWrapper}>
-            {props.isFetching ? <Preloader/> : null}
             {/*Banner notifying about watches absence*/}
+            {/* {props.isFetching ? <Preloader/> : null} */}
             <div className={s.absenceBannerBlock}>
                 <div className={s.absenceBanner} hidden={props.watchesData.length !== 0}>Страница часов пуста :( <br/>
                     Чтобы добавить часы, нажмите "+"
                 </div>
             </div>
-            {
+            {props.isFetching ? <Preloader/> :
                 props.watchesData.map(w =>
                     <div key={w.id} className={s.watchBlock}>
                         <div className={s.deleteWatchBlock} onClick={() => props.deleteWatch(w.id)}
