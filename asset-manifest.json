@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/watch-switcher/static/css/main.f8b5df30.css",
-    "main.js": "/watch-switcher/static/js/main.c70c4432.js",
+    "main.css": "/watch-switcher/static/css/main.0e6d8687.css",
+    "main.js": "/watch-switcher/static/js/main.27db5175.js",
     "static/js/787.78dd129a.chunk.js": "/watch-switcher/static/js/787.78dd129a.chunk.js",
     "static/media/clock_face.png": "/watch-switcher/static/media/clock_face.3d0f32144c3b69ac83ab.png",
     "static/media/ball-triangle.svg": "/watch-switcher/static/media/ball-triangle.1ae749f6aa35398a8a268524750d5015.svg",
     "index.html": "/watch-switcher/index.html",
-    "main.f8b5df30.css.map": "/watch-switcher/static/css/main.f8b5df30.css.map",
-    "main.c70c4432.js.map": "/watch-switcher/static/js/main.c70c4432.js.map",
+    "main.0e6d8687.css.map": "/watch-switcher/static/css/main.0e6d8687.css.map",
+    "main.27db5175.js.map": "/watch-switcher/static/js/main.27db5175.js.map",
     "787.78dd129a.chunk.js.map": "/watch-switcher/static/js/787.78dd129a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f8b5df30.css",
-    "static/js/main.c70c4432.js"
+    "static/css/main.0e6d8687.css",
+    "static/js/main.27db5175.js"
   ]
 }
